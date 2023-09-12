@@ -1,0 +1,39 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sum To N</title>
+
+  <!-- You may add more stuff here -->
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <form onsubmit="return !1">
+    <h2>Sum To N</h2>
+    <label for="input-number">Enter Number</label>
+    <input id="input-number" type="text" pattern="\d*" />
+    <br /> <br />
+    <label for="sum_to_n_a">Sum to n a: </label>
+    <span id="#sum_to_n_a"></span>
+    <br /> <br />
+    <label for="sum_to_n_b">Sum to n b: </label>
+    <span id="#sum_to_n_b"></span>
+    <br /> <br />
+    <label for="sum_to_n_c">Sum to n c:  </label>
+    <span id="#sum_to_n_c"></span>
+    <br /> <br />
+    <button onclick="calculate()">Calculate</button>
+  </form>
+  <script src="sum_to_n.js"></script>
+  <script type="text/javascript">
+    function calculate() {
+      let number = parseInt(document.getElementById("input-number").value);
+      document.getElementById("#sum_to_n_a").innerHTML = sum_to_n_a(number);
+      document.getElementById("#sum_to_n_b").innerHTML = sum_to_n_b(number);
+      document.getElementById("#sum_to_n_c").innerHTML = sum_to_n_c(number);
+    }
+  </script>
+</body>
+
+</html>
